@@ -38,4 +38,4 @@ jobs:
 
       - name: Run adp update
         run: 'source("update_mfl.R")'
-        shell: Rscript
+        shell: Rscript{0}
