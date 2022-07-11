@@ -7,6 +7,9 @@ library(stringr)
 library(piggyback)
 library(cli)
 
+options(dplyr.summarise.inform = FALSE,
+        piggyback.verbose = FALSE)
+
 mfl_user_agent <- function(league_id){
   paste0(Sys.getenv("MFL_USER_AGENT"),league_id)
 }
