@@ -22,7 +22,7 @@ mfl_user_agent <- function(league_id){
 #
 # fwrite(leagues,"mfl_league_ids.csv",quote = TRUE)
 
-leagues <- fread("mfl_league_ids.csv")
+leagues <- fread("league_ids_mfl.csv")
 
 get_draft <- function(league_id){
   cli::cli_alert("League ID: {league_id}")
