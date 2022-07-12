@@ -7,12 +7,12 @@ library(stringr)
 library(piggyback)
 library(cli)
 
-# leagues <- sleeper_userleagues("ScottFishBowl", 2022) |>
-# select(league_id, league_name) |>
-#   filter(str_detect(league_name,"\\#SFB12"))
-# fwrite(leagues,"league_ids_sleeper.csv")
+leagues <- sleeper_userleagues("ScottFishBowl", 2022) |>
+select(league_id, league_name) |>
+  filter(str_detect(league_name,"\\#SFB12")) |> 
+  mutate(league_id = as.character(league_id))
 
-leagues <- fread("league_ids_sleeper.csv")
+fwrite(leagues,"league_ids_sleeper.csv")
 
 get_draft <- function(league_id){
   cli::cli_alert("League ID: {league_id}")
