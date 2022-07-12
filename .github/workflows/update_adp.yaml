@@ -35,5 +35,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
 
       - name: Run adp update
-        run: 'source("update_mfl.R")'
+        run: | 
+          source("update_mfl.R")
+          source("update_sleeper.R")
         shell: Rscript {0}
