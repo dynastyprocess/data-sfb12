@@ -8,4 +8,6 @@ navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "@_TanHo on Twitter"
+      href: https://twitter.com/_TanHo
 output: distill::distill_article
