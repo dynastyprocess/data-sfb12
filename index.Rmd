@@ -1,7 +1,7 @@
 ---
 title: "SFB12 ADP"
 description: |
-  Tan's simple ADP site for SFB12
+  A simple ADP site for SFB12, by [@_TanHo](https://twitter.com/_TanHo)
 site: distill::distill_website
 ---
 
@@ -14,7 +14,6 @@ suppressPackageStartupMessages({
   library(tidyr)
 })
 ```
-
 ```{r include = FALSE}
 picks_mfl <- data.table::fread("https://github.com/dynastyprocess/data-sfb12/releases/download/data-mfl/draft_picks_mfl.csv") |> 
   mutate(player_id = as.character(player_id))
@@ -77,7 +76,7 @@ avail <- tidyr::crossing(
 
 ```
 
-Last updated `r timestamp`.
+Last updated `r timestamp`. 
 
 # ADP
 Across all MFL and Sleeper drafts.
