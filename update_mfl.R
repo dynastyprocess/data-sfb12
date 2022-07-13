@@ -35,7 +35,7 @@ drafts <- leagues |>
   unnest(drafts) |>
   mutate(
     division_name = case_when(
-      league_id == 58678 & division == 2 ~ "ATLANTIS, ATLANTIS",
+      league_id == 58678 & division == "02" ~ "ATLANTIS, ATLANTIS",
       TRUE ~ division_name
     )
   )
