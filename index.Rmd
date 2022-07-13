@@ -1,6 +1,6 @@
 ---
 title: "SFB12 ADP"
-description: 'A simple ADP site for SFB12, by @_TanHo'
+description: A simple ADP site for SFB12, by \@\_TanHo
 site: distill::distill_website
 ---
 
