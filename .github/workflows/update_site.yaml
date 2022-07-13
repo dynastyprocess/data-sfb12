@@ -43,6 +43,8 @@ jobs:
 
       - name: Commit and push
         run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "Actions User"
           git add docs
           git commit -m "adp site update `date`"
           git push origin gh-pages
