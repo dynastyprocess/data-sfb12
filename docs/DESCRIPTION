@@ -17,8 +17,4 @@ Imports:
     stringr,
     cli,
     tidyr,
-    purrr,
-    rmarkdown,
-    distill,
-    reactable,
-    nflreadr
+    purrr

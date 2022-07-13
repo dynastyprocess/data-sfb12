@@ -1,0 +1,11 @@
+name: "SFB12 ADP by DynastyProcess.com"
+title: "SFB12 ADP"
+description: |
+  A simple site of SFB12 ADP, by DynastyProcess.com
+output_dir: "docs"
+theme: dynastyprocess.css
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+output: distill::distill_article
