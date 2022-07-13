@@ -32,7 +32,13 @@ get_draft <- function(league_id){
 
 drafts <- leagues |>
   mutate(drafts = map(league_id, possibly(get_draft, otherwise = tibble()))) |>
-  unnest(drafts)
+  unnest(drafts) |>
+  mutate(
+    division_name = case_when(
+      league_id == 58678 & division == 2 ~ "ATLANTIS, ATLANTIS",
+      TRUE ~ division_name
+    )
+  )
 
 fwrite(drafts,"output/draft_picks_mfl.csv",quote = TRUE)
 update_time <- format(Sys.time(), tz = "America/Toronto", usetz = TRUE)
