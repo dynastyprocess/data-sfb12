@@ -85,7 +85,7 @@ Across all MFL and Sleeper drafts.
 ```{r layout = "l-page"}
 adp |> 
   select(-mfl_id, -sleeper_id, -contains("_min"), -contains("_max")) |>
-  mutate(position = as.factor(position)) |> 
+  rename(pos = position) |>
   dplyr::rename_with(~gsub("_"," ", .x)) |> 
   reactable(
     columns = list(
@@ -106,9 +106,8 @@ adp |>
 
 ```{r layout = "l-page"}
 avail |> 
-  select(league_name, name, position, team, n, ovr_avg, ovr_sd, pos_avg, pos_sd) |> 
+  select(league_name, name, pos=position, team, n, ovr_avg, ovr_sd, pos_avg, pos_sd) |> 
   dplyr::rename_with(~gsub("_"," ", .x)) |> 
-  mutate(position = as.factor(position)) |> 
   mutate(rank = "", .before = name) |> 
   reactable(
     columns = list(
